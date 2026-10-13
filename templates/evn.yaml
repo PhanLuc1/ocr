@@ -1,0 +1,7 @@
+doc_type: evn_bill
+# "tiendien" được bỏ vì TGDD cũng có "thu hộ tiền điện" → match sai.
+# "evn" là brand name, specific enough.
+triggers: [evn, hoadondien]
+primary_field: ma_kh
+# No doc-specific fields — relies on generic ma_kh extractor
+fields: {}

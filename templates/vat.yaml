@@ -1,0 +1,12 @@
+doc_type: vat_invoice
+# Compact-text (no-space) triggers — OCR often concatenates title text
+triggers: [hoadongiatri, hdgtgt, hoadongtgt]
+primary_field: so
+fields:
+  so:
+    # OCR often misreads "Số" as "S6" (ố → 6) or just "S"
+    labels: [so, s6]
+    value_regex: '^\d{5,10}$'
+  ky_hieu:
+    labels: [ky hieu, ky hiu]
+    value_regex: '^[A-Z0-9]{4,10}$'

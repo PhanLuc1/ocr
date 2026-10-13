@@ -1,0 +1,4 @@
+doc_type: water_sms
+triggers: [tiennuoc]
+primary_field: ma_kh
+fields: {}

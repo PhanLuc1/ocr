@@ -1,0 +1,19 @@
+# Generic fields extracted from ANY document (incl. unknown ones).
+# Order matters: more specific labels first so they consume their line
+# before shorter variants can match (e.g. "ma so thue" before "so").
+fields:
+  ma_thue:
+    labels: [ma so thue, mst]
+    value_regex: '^\d{10,14}$'
+  ma_kh:
+    labels: [ma khach hang, ma kh, mkh]
+    value_regex: '^[A-Z0-9]{4,20}$'
+  ma_hd:
+    labels: [ma hoa don, ma hd]
+    value_regex: '^[A-Z0-9]{4,20}$'
+  ma_gd:
+    labels: [ma giao dich, ma gd]
+    value_regex: '^\d{8,20}$'
+
+# Priority when primary_field misses and we need to pick an invoice_number
+priority: [ma_hd, ma_gd, ma_kh]

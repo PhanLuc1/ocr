@@ -1,0 +1,7 @@
+doc_type: tgdd_receipt
+triggers: [y/c, biennhan, tgdd, "the gi"]
+primary_field: ma_gd
+fields:
+  phieu_yc:
+    labels: [phieu y/c, phieu yc, y/c]
+    value_regex: '^[A-Z0-9]{10,25}$'
